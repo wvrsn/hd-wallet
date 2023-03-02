@@ -21,8 +21,8 @@ export class EthereumHDWallet implements HDWallet {
       const childKey = masterKey.derivePath(hdPathFn(i)).getWallet();
 
       accounts.push({
-        privateKey: '0x' + childKey.getAddress().toString('hex'),
-        publicKey: childKey.getPrivateKey().toString('hex')
+        publicKey: '0x' + childKey.getAddress().toString('hex'),
+        privateKey: childKey.getPrivateKey().toString('hex')
       });
     }
 
